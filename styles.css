@@ -216,6 +216,14 @@ p.item__stack {
 }
 
 /* Адаптивность */
+@media (max-width: 1080px) {
+  .item__meta {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 4px;
+  }
+}
+
 @media (max-width: 768px) {
   .header__inner {
     flex-direction: column;
