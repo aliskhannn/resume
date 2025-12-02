@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Резюме — Хутиев Алисхан</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<header class="header">
+		<div class="container header__inner">
+			<div>
+				<h1 class="header__name">Хутиев Алисхан</h1>
+				<p class="header__position">Backend‑разработчик</p>
+			</div>
+			<div class="header__contacts">
+				<p>Тел: <a href="tel:+79633992806">+7 (938) 014-72-43</a></p>
+				<p>Telegram: <a href="https://t.me/aliskhannn" target="_blank">@aliskhannn</a></p>
+				<p>Email: <a href="mailto:aliskhankhutiev.dev@gmail.com">aliskhankhutiev.dev@gmail.com</a></p>
+				<p>GitHub: <a href="https://github.com/aliskhannn" target="_blank">github.com/aliskhannn</a></p>
+				<p>Город: Назрань, готов к переезду и удалёнке</p>
+			</div>
+		</div>
+	</header>
+
+	<main class="main container">
+
+		<section class="section">
+			<h2 class="section__title">
+				Опыт работы
+				<span id="experience-total"></span>
+			</h2>
+
+			<article class="item" data-start="2025-11" data-end="now">
+				<div class="item__meta">
+					<span>Ноябрь 2025 — настоящее время</span>
+				</div>
+				<div class="item__content">
+					<div class="item__header">
+						<h3 class="item__title">Raven — авторская библиотека на Go</h3>
+						<p class="item__position">Backend‑разработчик</p>
+					</div>
+					<p class="item__subtitle">
+						Распределённый in‑memory кэш на основе gossip‑протокола для работы в многоузловом кластере.
+					</p>
+					<ul class="item__list">
+						<li>Проектирование потокобезопасного локального кэша с возможностью горизонтального масштабирования.</li>
+						<li>Применение gossip‑подхода для membership, мониторинга узлов и синхронизации метаданных.</li>
+						<li>Фокус на отказоустойчивости и простоте интеграции через удобный API.</li>
+					</ul>
+					<p class="item__stack">Стек: Go, конкурентность (sync/Mutex и др.), распределённые системы, Gossip.</p>
+				</div>
+			</article>
+
+			<article class="item" data-start="2025-01" data-end="2025-10">
+				<div class="item__meta">
+					<span>Январь 2025 — Октябрь 2025</span>
+				</div>
+
+				<div class="item__content">
+
+					<div class="item__header">
+						<h3 class="item__title">Проектная деятельность — pet‑проекты</h3>
+						<p class="item__position">Backend‑разработчик</p>
+					</div>
+
+					<div class="subitem">
+						<h4 class="subitem__title">Delayed Notifier — сервис отложенных уведомлений</h4>
+						<p class="subitem_subtitle">Разработал сервис для доставки уведомлений с управляемой задержкой и гарантией
+							доставки.</p>
+						<ul class="item__list">
+							<li>Интегрировал RabbitMQ с плагином delayed message exchange для точного планирования отправки в заданное
+								время.</li>
+							<li>Внедрил механизм экспоненциального retry/backoff с настройкой DLX/Retry Queue для обработки временных
+								ошибок.</li>
+							<li>Реализовал поддержку нескольких каналов доставки (Email, Telegram) и возможность отмены уведомлений.
+							</li>
+							<li>Применил паттерн Worker для эффективной фоновой обработки очереди.</li>
+						</ul>
+						<p class="item__stack">Стек: Go, PostgreSQL, Redis, RabbitMQ, Docker.</p>
+						<p class="subitem__link">
+							<a href="https://github.com/aliskhannn/delayed-notifier" target="_blank">GitHub: delayed-notifier</a>
+						</p>
+					</div>
+
+					<div class="subitem">
+						<h4 class="subitem__title">Order Service — микросервис заказов</h4>
+						<p class="subitem_subtitle">Создал микросервис с применением принципов Clean Architecture для четкого
+							разделения бизнес-логики и инфраструктуры.</p>
+						<ul class="item__list">
+							<li>Разработал асинхронную доставку и обработку сообщений через брокер Apache Kafka.</li>
+							<li>Внедрил in-memory кэширование данных для снижения задержек и нагрузки на основную БД.</li>
+							<li>Организовал структуру слоев (domain, application, infrastructure) для независимого тестирования и
+								масштабирования.</li>
+						</ul>
+						<p class="item__stack">Стек: Go, PostgreSQL, Kafka, in‑memory cache, Docker.</p>
+						<p class="subitem__link">
+							<a href="https://github.com/aliskhannn/order-service" target="_blank">GitHub: order-service</a>
+						</p>
+					</div>
+
+					<div class="subitem">
+						<h4 class="subitem__title">Image Processor — сервис обработки изображений</h4>
+						<p class="subitem_subtitle">Разработал сервис для фоновой асинхронной обработки изображений с использованием
+							очередей.</p>
+						<ul class="item__list">
+							<li>Интегрировал Apache Kafka для надежной передачи задач на обработку.</li>
+							<li>Реализовал функции изменения размера (resize) и генерации миниатюр изображений.</li>
+							<li>Подключил хранилище MinIO (S3-совместимое) для сохранения и загрузки обработанных файлов.</li>
+						</ul>
+						<p class="item__stack">Стек: Go, PostgreSQL, Kafka, MinIO, Docker.</p>
+						<p class="subitem__link">
+							<a href="https://github.com/aliskhannn/image-processor" target="_blank">GitHub: image-processor</a>
+						</p>
+					</div>
+
+					<div class="subitem">
+						<h4 class="subitem__title">Warehouse Control — система управления складом</h4>
+						<p class="subitem_subtitle">Создал мини-систему учета запасов с фокусом на безопасность, аудит и контроль
+							доступа.</p>
+						<ul class="item__list">
+							<li>Внедрил JWT-авторизацию с ролевым контролем доступа (RBAC) для трех уровней пользователей.</li>
+							<li>Реализовал полное логирование истории изменений и действий пользователей.</li>
+						</ul>
+						<p class="item__stack">Стек: Go, PostgreSQL, JWT, Docker.</p>
+						<p class="subitem__link">
+							<a href="https://github.com/aliskhannn/warehouse-control" target="_blank">GitHub: warehouse-control</a>
+						</p>
+					</div>
+
+					<div class="subitem">
+						<h4 class="subitem__title">Comment Tree — сервис древовидных комментариев</h4>
+						<p class="subitem_subtitle">Разработал сервис для работы с иерархическими структурами данных комментариев.
+						</p>
+						<ul class="item__list">
+							<li>Внедрил эффективную логику хранения и выборки древовидных комментариев.</li>
+							<li>Реализовал пагинацию, сортировку и полнотекстовый поиск для работы с большими объемами данных.</li>
+						</ul>
+						<p class="item__stack">Стек: Go, PostgreSQL, Docker.</p>
+						<p class="subitem__link">
+							<a href="https://github.com/aliskhannn/comment-tree" target="_blank">GitHub: comment-tree</a>
+						</p>
+					</div>
+
+				</div>
+			</article>
+		</section>
+
+		<section class="section">
+			<h2 class="section__title">Образование</h2>
+			<h3 class="section__subtitle">Среднее специальное</h3>
+			<article class="item">
+				<div class="item__meta">
+					<span>2023</span>
+				</div>
+
+				<div class="item__content">
+					<h3 class="item__title">Северо‑Кавказский топливно‑энергетический колледж им. Т. Х. Цурова</h3>
+					<p>Информационные системы и программирование</p>
+				</div>
+			</article>
+
+		</section>
+
+		<section class="section">
+			<h2 class="section__title">Курсы</h2>
+			<article class="item">
+				<div class="item__meta">
+					<span>2025</span>
+				</div>
+
+				<div class="item__content">
+					<h3 class="item__title">«Горутиновый Golang»</h3>
+					<p>WBTECH Техношкола</p>
+				</div>
+			</article>
+		</section>
+
+		<section class="section">
+
+			<h2 class="section__title">Навыки</h2>
+			<article class="item item__skills">
+
+				<div class="subitem">
+					<div class="item__meta">
+						<span>Знание языков</span>
+					</div>
+					<ul class="item__list">
+						<li>
+							Русский
+							<span class="language-level">— родной</span>
+						</li>
+						<li>
+							Английский
+							<span class="language-level">— B1 — Средний</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="subitem">
+					<div class="item__meta">
+						<span>Навыки</span>
+					</div>
+
+					<div class="item__content">
+						<div class="tags">
+							<span class="tag">Golang</span>
+							<span class="tag">PostgreSQL</span>
+							<span class="tag">REST API</span>
+							<span class="tag">Redis</span>
+							<span class="tag">Kafka</span>
+							<span class="tag">RabbitMQ</span>
+							<span class="tag">Docker</span>
+							<span class="tag">Linux</span>
+							<span class="tag">Git</span>
+							<span class="tag">JWT</span>
+							<span class="tag">Unit Testing</span>
+							<span class="tag">Clean Architecture</span>
+						</div>
+					</div>
+
+				</div>
+
+			</article>
+		</section>
+
+		<section class="section">
+			<h2 class="section__title">Дополнительная информация</h2>
+			<article class="item">
+				<div class="item__meta">
+					<span>О себе</span>
+				</div>
+
+				<div class="item__content">
+					<p>
+						Backend‑разработчик на Go. Интересуюсь распределёнными системами,
+						очередями сообщений и построением надёжных сервисов. Пишу библиотеку
+						распределённого in‑memory кэша на основе gossip‑подхода, делаю pet‑проекты
+						с использованием Kafka, RabbitMQ, PostgreSQL и Docker.
+					</p>
+				</div>
+			</article>
+		</section>
+
+	</main>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
